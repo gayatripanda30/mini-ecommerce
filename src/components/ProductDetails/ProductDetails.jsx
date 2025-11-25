@@ -13,6 +13,12 @@ export default function ProductDetails() {
   const isFav = contains(product.id);
   const navigate = useNavigate();
 
+  function formatDeliveryDate(addDays = 5) {
+    const d = new Date();
+    d.setDate(d.getDate() + addDays);
+    return d.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" });
+  }
+
   if (!product) return <div>Product not found</div>;
 
   return (
@@ -49,6 +55,66 @@ export default function ProductDetails() {
             >
               Buy Now
             </button>
+          </div>
+
+          <div className="delivery-info">
+            <div className="delivery-box">
+              <div className="delivery-icon">🚚</div>
+              <div className="delivery-text">
+                <div className="delivery-date">Delivery by <strong>{formatDeliveryDate(5)}</strong></div>
+                <div className="delivery-desc">Free Delivery on orders above ₹100</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="product-info">
+            <div className="info-title">Product Details</div>
+            <div className="info-row">
+              <span className="info-key">Material</span>
+              <span className="info-value">Premium Quality</span>
+            </div>
+            <div className="info-row">
+              <span className="info-key">Warranty</span>
+              <span className="info-value">1 Year Warranty</span>
+            </div>
+            <div className="info-row">
+              <span className="info-key">Return Policy</span>
+              <span className="info-value">30 Days Easy Return</span>
+            </div>
+            <div className="info-row">
+              <span className="info-key">Availability</span>
+              <span className="info-value in-stock">In Stock</span>
+            </div>
+          </div>
+
+          <div className="variants-section">
+            <div className="variants-title">Available Variants</div>
+            
+            {product.colors && product.colors.length > 0 && (
+              <div className="variant-group">
+                <div className="variant-label">Color</div>
+                <div className="variant-options">
+                  {product.colors.map((color, idx) => (
+                    <button key={idx} className="variant-btn color-variant" title={color}>
+                      {color}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {product.styles && product.styles.length > 0 && (
+              <div className="variant-group">
+                <div className="variant-label">Style</div>
+                <div className="variant-options">
+                  {product.styles.map((style, idx) => (
+                    <button key={idx} className="variant-btn style-variant">
+                      {style}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

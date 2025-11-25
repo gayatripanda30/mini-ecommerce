@@ -77,6 +77,141 @@
   color: var(--brand-blue);
 }
 
+.delivery-info {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.delivery-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: var(--muted-light);
+  border-radius: 8px;
+}
+
+.delivery-icon {
+  font-size: 1.5rem;
+}
+
+.delivery-text {
+  flex: 1;
+}
+
+.delivery-date {
+  font-weight: 600;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.delivery-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.product-info {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.info-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-key {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.info-value {
+  color: black;
+  font-weight: 500;
+}
+
+.info-value.in-stock {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.variants-section {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+}
+
+.variants-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.variant-group {
+  margin-bottom: 16px;
+}
+
+.variant-group:last-child {
+  margin-bottom: 0;
+}
+
+.variant-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: black;
+  font-size: 0.95rem;
+}
+
+.variant-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.variant-btn {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.9rem;
+}
+
+.variant-btn:hover {
+  border-color: var(--brand-blue);
+  background: var(--muted-light);
+  color: var(--brand-blue);
+}
+
+.variant-btn.color-variant {
+  min-width: 70px;
+}
+
+.variant-btn.style-variant {
+  min-width: 90px;
+}
+
 /* responsive */
 @media (max-width: 900px) {
   .details-grid {
