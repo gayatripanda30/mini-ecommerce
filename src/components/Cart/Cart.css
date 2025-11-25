@@ -1,0 +1,160 @@
+.cart-page {
+  padding-bottom: 40px;
+}
+
+.cart-title {
+
+.cart-delivery {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cart-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.cart-thumb {
+  width: 110px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-meta {
+  flex: 1;
+}
+
+.cart-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cart-price {
+  color: black;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-qty button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+}
+
+.remove-btn {
+  margin-left: 12px;
+  color: var(--danger);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-summary {
+  background: var(--card-bg);
+  padding: 14px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.summary-amount {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.summary-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.price-details {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--muted-light);
+}
+
+.pd-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.pd-row,
+.pd-total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  align-items: center;
+}
+
+.pd-row .pd-key {
+  color: var(--muted);
+}
+
+.pd-row .pd-value {
+  color: var(--text);
+}
+
+.pd-total-row {
+  border-top: 1px dashed var(--border);
+  margin-top: 8px;
+  padding-top: 10px;
+  font-weight: 800;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 18px;
+  border: none;
+  background: var(--muted-light);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn.primary {
+  background: var(--brand-yellow);
+  color: black;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn.primary:hover { background: var(--brand-yellow-dark); }

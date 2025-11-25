@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+:root {
+  --container-max: 1200px;
+  --bg: #f7f9fb;
+  --text: #111;
+  --brand-blue: #2874f0; /* Flipkart-like blue */
+  --brand-yellow: #ffd400; /* Flipkart-like yellow */
+  --muted: #666;
+  --card-bg: #ffffff;
+  --border: #e6e6e6;
+  --muted-light: #f3f4f6;
+  --brand-blue-dark: #165fc1;
+  --brand-yellow-dark: #e6b800;
+  --text-on-blue: #ffffff;
+  --transition-fast: 180ms ease;
+  --danger: #e24;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* helpers */
+a { color: inherit; text-decoration: none; }
+h1,h2,h3 { color: var(--text); }
+button { font-family: inherit; }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* small responsive tweak for main container */
+@media (max-width: 600px) {
+  .container { width: 95%; }
 }
